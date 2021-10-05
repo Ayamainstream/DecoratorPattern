@@ -1,18 +1,11 @@
-public class TicketDecorator implements Ticket{
-
-    private final Ticket ticket;
+public abstract class TicketDecorator implements Ticket{
+    Ticket ticket;
 
     public TicketDecorator(Ticket ticket){
         this.ticket = ticket;
     }
 
-    @Override
-    public int getCost() {
-        return ticket.getCost();
-    }
+    public abstract int getCost();
 
-    @Override
-    public String getDescription() {
-        return ticket.getDescription();
-    }
+    public abstract String getDescription();
 }
