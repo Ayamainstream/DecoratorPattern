@@ -13,11 +13,11 @@ public class TicketWithBaggage extends TicketDecorator{
 
     @Override
     public int getCost() {
-        return super.getCost() + baggageCost();
+        return ticket.getCost() + baggageCost();
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + baggage();
+        return ticket.getDescription() + baggage();
     }
 }
