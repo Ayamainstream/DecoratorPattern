@@ -13,11 +13,11 @@ public class VipTicket extends TicketDecorator{
 
     @Override
     public int getCost() {
-        return super.getCost() + vipCost();
+        return ticket.getCost() + vipCost();
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + vip();
+        return ticket.getDescription() + vip();
     }
 }
